@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var Staff = "682605083334410338"
+var STAFF = "741582315473469532"
 
 
 client.on('ready', () => {
@@ -60,7 +62,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('message', message => {
-  if (message.member.roles.cache.find(roles => roles.id === Staff)) {
+  if (message.member.roles.cache.find(roles => roles.id === STAFF)) {
     // Ignore messages that aren't from a guild
     if (!message.guild) return;
 
@@ -107,7 +109,6 @@ client.on('message', message => {
     } else {
     message.reply('no tienes el permiso necesario para banear usuarios')
 }});
-
 
 
 
