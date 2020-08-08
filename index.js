@@ -64,7 +64,7 @@ client.on('message', message => {
     // Ignore messages that aren't from a guild
     if (!message.guild) return;
 
-      // if the message content starts with "!ban"
+      // if the message content starts with "/ban"
     if (message.content.startsWith('/ban')) {
       // Assuming we mention someone in the message, this will return the user
       const user = message.mentions.users.first();
